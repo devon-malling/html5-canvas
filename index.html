@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 canvas!</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<canvas id="myCanvas" width="900" height="900" style="border:1px solid #000000;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0,0,150,75);
+
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke()
+ctx.moveTo(40,40);
+</script>
+
+
+
+     
+</body>
+</html>
