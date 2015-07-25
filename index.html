@@ -17,8 +17,28 @@ ctx.fillRect(0,0,150,75);
 
 ctx.beginPath();
 ctx.arc(95,50,40,0,2*Math.PI);
-ctx.stroke()
+ctx.stroke();
 ctx.moveTo(40,40);
+
+function drawShape() {
+ctx.beginPath();
+ctx.moveTo(500,0);
+ctx.lineTo(575,100);
+ctx.lineTo(425,100);
+ctx.closePath();
+ctx.fillStyle ="#000000";
+ctx.fill();
+}
+drawShape();
+
+ctx.beginPath();
+ctx.moveTo(75,0);
+ctx.lineTo(150,100);
+ctx.lineTo(0,100);
+ctx.closePath();
+ctx.fill();
+
+var startPoint = ctx.moveTo()
 </script>
 
 
