@@ -6,39 +6,58 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<canvas id="myCanvas" width="900" height="900" style="border:1px solid #000000;">
+<canvas id="myCanvas" width="9000" height="8000" style="border:1px solid #000000;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 <script>
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.fillStyle = "#FF0000";
-ctx.fillRect(0,0,150,75);
 
+// Rectangle Brahhlla
+function drawRect() {
+	// ctx.fillStyle ="#ffffff";
+	ctx.rect(600,300,150,150);
+	ctx.stroke();
+	// ctx.moveTo(601,300);
+	// ctx.lineTo(600, 450);
+}
+drawRect();
+
+// Circle brajjj
+function drawCirc() {
 ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
+ctx.arc(600,500,40,0,2*Math.PI);
 ctx.stroke();
 ctx.moveTo(40,40);
+}
+drawCirc();
 
+// Triangle Bra
 function drawShape() {
 ctx.beginPath();
 ctx.moveTo(500,0);
 ctx.lineTo(575,100);
 ctx.lineTo(425,100);
 ctx.closePath();
-ctx.fillStyle ="#000000";
-ctx.fill();
+// ctx.fillStyle ="#000000";
+// ctx.fill();
 }
-drawShape();
 
-ctx.beginPath();
-ctx.moveTo(75,0);
-ctx.lineTo(150,100);
-ctx.lineTo(0,100);
-ctx.closePath();
-ctx.fill();
 
-var startPoint = ctx.moveTo()
+function drawTriangle(x,y) {
+	ctx.beginPath();
+	ctx.moveTo(x,y);
+	ctx.lineTo(x + 75, y + 100);
+	ctx.lineTo(x - 75, y + 100);
+	ctx.closePath();
+	ctx.stroke();
+}
+
+
+drawTriangle(100,200);
+drawShape(); 	
+
+
 </script>
 
 
