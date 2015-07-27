@@ -17,9 +17,12 @@ var ctx = c.getContext("2d");
 function drawRect() {
 	// ctx.fillStyle ="#ffffff";
 	ctx.rect(600,300,150,150);
+	ctx.moveTo(630,300);
+	ctx.lineTo(630, 450);
+	ctx.moveTo(640,300);
+
+	ctx.lineTo(640, 450);
 	ctx.stroke();
-	// ctx.moveTo(601,300);
-	// ctx.lineTo(600, 450);
 }
 drawRect();
 
@@ -42,6 +45,7 @@ ctx.closePath();
 // ctx.fillStyle ="#000000";
 // ctx.fill();
 }
+drawShape(); 
 
 
 function drawTriangle(x,y) {
@@ -52,11 +56,18 @@ function drawTriangle(x,y) {
 	ctx.closePath();
 	ctx.stroke();
 }
-
-
 drawTriangle(100,200);
-drawShape(); 	
 
+
+function drawBezier() {
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.bezierCurveTo(20,200,200,100,200,20);
+// ctx.fillStyle ="#ff0000";
+ctx.closePath();
+ctx.stroke();	
+}
+drawBezier();
 
 </script>
 
