@@ -30,7 +30,7 @@ function drawRect(x, y, w, h) {
 	// ctx.lineTo(640, 450);
 	ctx.stroke();
 }
-drawRect(400,100, 60, 60);
+drawRect(100,500, 60, 60);
 
 
 // Circle brajjj
@@ -68,11 +68,33 @@ drawTriangle(75,0);
 
 function drawQuadratic() {
 ctx.beginPath();
-ctx.moveTo(400,500);
-ctx.quadraticCurveTo(500,700,600,500);
+ctx.moveTo(400, 100);
+ctx.quadraticCurveTo(300, 600, 800, 500);
+ctx.moveTo(400, 100);
+ctx.quadraticCurveTo(800, 0, 800, 500);
+// X axis line
+// ctx.moveTo(600, 100);
+// ctx.lineTo(600, 500);
+// // Y axis line
+// ctx.moveTo(600, 300);
+// ctx.lineTo(300, 300);
+
+// ctx.moveTo(600, 300);
+// ctx.lineTo(300, 600);
+ctx.closePath();
+ctx.stroke();
+ctx.fillStyle ="#ff0000";
+ctx.fill();
+}
+
+drawQuadratic();
+function drawQuadratic2() {
+ctx.beginPath();
+ctx.moveTo(400,100);
+ctx.quadraticCurveTo(600,300,800,100);
 ctx.stroke();	
 }
-drawQuadratic();
+drawQuadratic2();
 
 </script>
 
