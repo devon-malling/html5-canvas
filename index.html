@@ -3,10 +3,10 @@
 <head>
 <title>HTML5 canvas!</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="main.css">
+<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
 </head>
 <body>
-<canvas id="myCanvas" width="9000" height="8000" style="border:1px solid #000000;">
+<canvas id="myCanvas" width="1250" height="650" style="border:1px solid #000000;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 <script>
@@ -14,22 +14,29 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
 // Rectangle Brahhlla
-function drawRect() {
+function drawRect(x, y, w, h) {
 	// ctx.fillStyle ="#ffffff";
-	ctx.rect(600,300,150,150);
-	ctx.moveTo(630,300);
-	ctx.lineTo(630, 450);
-	ctx.moveTo(640,300);
+	ctx.rect(x, y, w, h);
+	ctx.moveTo(x + w/8, y);
+	ctx.lineTo(x + w/8, y + h);
+	
+	ctx.moveTo(x + w * 2/8, y);
+	ctx.lineTo(x + w * 2/8, y + h);
 
-	ctx.lineTo(640, 450);
+	ctx.moveTo(x + w * 3/8, y);
+	ctx.lineTo(x + w * 3/8, y + h);
+
+	// ctx.moveTo(640,300);
+	// ctx.lineTo(640, 450);
 	ctx.stroke();
 }
-drawRect();
+drawRect(400,100, 60, 60);
+
 
 // Circle brajjj
 function drawCirc() {
 ctx.beginPath();
-ctx.arc(600,500,40,0,2*Math.PI);
+ctx.arc(40,200,40,0,2*Math.PI);
 ctx.stroke();
 ctx.moveTo(40,40);
 }
@@ -56,18 +63,16 @@ function drawTriangle(x,y) {
 	ctx.closePath();
 	ctx.stroke();
 }
-drawTriangle(100,200);
+drawTriangle(75,0);
 
 
-function drawBezier() {
+function drawQuadratic() {
 ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.bezierCurveTo(20,200,200,100,200,20);
-// ctx.fillStyle ="#ff0000";
-ctx.closePath();
+ctx.moveTo(400,500);
+ctx.quadraticCurveTo(500,700,600,500);
 ctx.stroke();	
 }
-drawBezier();
+drawQuadratic();
 
 </script>
 
