@@ -96,6 +96,20 @@ ctx.stroke();
 }
 drawQuadratic2();
 
+function drawThing(x,y) {
+ctx.beginPath();
+ctx.moveTo(x,y);
+ctx.quadraticCurveTo(x + 350, y + 400, x + 700,y);
+
+ctx.moveTo(x + 350, y);
+ctx.lineTo(x + 350, y + 200);
+
+ctx.fillStyle ="#00ffcc";
+ctx.fill();
+ctx.stroke();
+
+}
+drawThing(200,400);
 </script>
 
 
