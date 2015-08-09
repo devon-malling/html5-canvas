@@ -86,15 +86,15 @@ ctx.stroke();
 ctx.fillStyle ="#ff0000";
 ctx.fill();
 }
+// drawQuadratic();
 
-drawQuadratic();
 function drawQuadratic2() {
 ctx.beginPath();
 ctx.moveTo(400,100);
 ctx.quadraticCurveTo(600,300,800,100);
 ctx.stroke();	
 }
-drawQuadratic2();
+// drawQuadratic2();
 
 function drawThing(x,y) {
 ctx.beginPath();
@@ -109,7 +109,33 @@ ctx.fill();
 ctx.stroke();
 
 }
-drawThing(200,400);
+// drawThing(200,400);
+
+// Quadratic Octopus
+function quadraticOctopus (x,y){
+ctx.beginPath();
+ctx.moveTo(x,y);
+ctx.quadraticCurveTo(x + 200, y + 200, x + 400, y);
+
+ctx.moveTo(x + 200, y);
+ctx.lineTo(x + 200, y + 100);
+
+ctx.moveTo(x + 100, y);
+ctx.lineTo(x + 100, y + 75);
+
+ctx.moveTo(x + 50, y);
+ctx.lineTo(x + 50, y + 45);
+
+ctx.moveTo(x + 150, y);
+ctx.lineTo(x + 150, y + 95);
+
+
+ctx.stroke();
+}
+
+quadraticOctopus(300, 200);
+
+
 </script>
 
 
