@@ -34,13 +34,15 @@ drawRect(100,500, 60, 60);
 
 
 // Circle brajjj
-function drawCirc() {
+function drawCirc(x,y,r,sa,ea) {
 ctx.beginPath();
-ctx.arc(40,200,40,0,2*Math.PI);
+ctx.arc(x,y,r,sa,ea*Math.PI);
 ctx.stroke();
-ctx.moveTo(40,40);
 }
-drawCirc();
+drawCirc(100,200,50,0,2);
+drawCirc(200,200, 50,0,2);
+drawCirc(150,250,50,0,1);
+drawCirc(150,150,50,3.15,2);
 
 // Triangle Bra
 function drawShape() {
